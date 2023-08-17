@@ -5,17 +5,23 @@ import logo from '../assets/big-logo.png';
 
 function Navbar() {
   return (
-    <div>
-        <img src={logo} alt="the apocalypse herald logo in gold lettering"/>
-        <li>
-            <Link to="/sports">Sports</Link>
-        </li>
-        <li>
-            <Link to="/entertainment">Entertainment</Link>
-        </li>
-        <li>
-            <Link to="/classifieds">Classifieds</Link>
-        </li>
+    <div class="flex">
+        <img 
+            src={logo} 
+            alt="the apocalypse herald logo in gold lettering"
+            className="h-32 w-48 w-full rounded-lg object-cover object-center"
+        />
+        <ul class="flex mx-8 list-style-type: none;">
+            <li className="mx-8 hover:bg-cyan-600">
+                <Link to="/sports">Sports</Link>
+            </li>
+            <li className="mx-8 hover:bg-cyan-600">
+                <Link to="/entertainment">Entertainment</Link>
+            </li>
+            <li className="mx-8 my-20 hover:bg-cyan-600">
+                <Link to="/classifieds">Classifieds</Link>
+            </li>
+        </ul>
     
 
         <form action="/" method="get">

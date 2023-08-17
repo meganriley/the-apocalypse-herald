@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Sports from "./pages/Sports"
@@ -10,15 +10,16 @@ import Classifieds from "./pages/Classifieds"
 function App() {
   return (
     <div className="App">
-      {/* <Router> */}
+      <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          {/* <Route exact path="/" element={}/> */}
           <Route exact path="/sports" element={<Sports/>}/>
           <Route exact path="/entertainment" element={<Entertainment/>}/>
           <Route exact path="/classifieds" element={<Classifieds/>}/>
         </Routes>
-    {/* </Router> */}
+        <Home/>
+    </BrowserRouter>
     </div>
   );
 }
